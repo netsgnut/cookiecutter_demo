@@ -1,6 +1,6 @@
 # cookiecutter_demo
 
-A cookiecutter  demo!
+Calculate word counts in a text file!
 
 ## Installation
 
@@ -10,7 +10,19 @@ $ pip install cookiecutter_demo
 
 ## Usage
 
-- TODO
+`cookiecutter_demo` can be used to count words in a text file and plot results
+as follows:
+
+```python
+from cookiecutter_demo.cookiecutter_demo import count_words
+from cookiecutter_demo.plotting import plot_words
+import matplotlib.pyplot as plt
+
+file_path = "test.txt"  # path to your file
+counts = count_words(file_path)
+fig = plot_words(counts, n=10)
+plt.show()
+```
 
 ## Contributing
 
